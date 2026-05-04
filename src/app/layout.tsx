@@ -19,9 +19,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // Truyền biến font vào thẻ html
-    <html lang="en" className={`h-full ${inter.variable}`}>
-      <body className="font-inter antialiased min-h-full flex flex-col bg-white text-black">
+    <html 
+      lang="en" 
+      className={`h-full ${inter.variable}`} 
+      suppressHydrationWarning 
+    >
+      <body 
+        className="font-inter antialiased min-h-full flex flex-col bg-white text-black"
+        suppressHydrationWarning
+      >
         {children}
       </body>
     </html>
