@@ -14,6 +14,17 @@ pnpm dev
 bun dev
 ```
 
+### Important: Troubleshooting
+If you encounter errors like `Can't resolve 'tailwindcss'` or if the UI colors are not displaying correctly (due to the Tailwind v4 upgrade), please do the following steps to refresh the environment:
+
+```bash
+# Remove old cache and dependencies
+rm -rf node_modules .next package-lock.json
+
+# Reinstall dependencies
+npm install
+
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
